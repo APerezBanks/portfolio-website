@@ -1,0 +1,244 @@
+/* Contenedor principal */
+.containerFotoyTexto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  column-gap: 1rem;
+}
+
+/* Contenedor de texto y iconos */
+.textoYIconos {
+  display: flex;
+  flex-direction: column; /* Apila verticalmente los textos y los iconos */
+  align-items: flex-start; /* Alinea los elementos al inicio (puedes ajustar) */
+  row-gap: 1rem; /* Espaciado entre textos e iconos */
+}
+#pokeball:hover {
+  color: rgb(175, 16, 16);
+}
+
+.tecnologias ul li {
+  transition: all 0.5s ease;
+  transform: scale(1);
+  transition: background-color 0.9s ease, transform 0.5s ease;
+}
+.tecnologias ul li:hover {
+  transform: scale(1.2);
+}
+
+.tecnologias ul li:first-child:hover {
+  color: rgb(245, 71, 23); /* html icon */
+}
+.tecnologias ul li:nth-child(2):hover {
+  color: rgb(10, 101, 246); /* css icon */
+}
+.tecnologias ul li:nth-child(3):hover {
+  color: rgb(224, 213, 6); /* js icon */
+}
+.tecnologias ul li:nth-child(4):hover {
+  color: red;
+}
+.tecnologias ul li:nth-child(5):hover {
+  color: rgb(131, 206, 236);
+}
+.tecnologias ul li:nth-child(6):hover {
+  color: rgb(2, 15, 115);
+}
+.tecnologias ul li:nth-child(7):hover {
+  color: rgb(207, 52, 10);
+}
+
+.texto h1,
+.texto h2 {
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el texto que se desborda */
+  text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+  font-size: 6vw; /* Ajusta el tamaño del texto dinámicamente */
+  max-width: 100%; /* Asegura que no supere el ancho del contenedor */
+  margin: 0; /* Quita márgenes adicionales */
+  text-align: start;
+}
+
+.texto h2 {
+  color: #b9537f;
+  font-size: 4.5vw;
+}
+
+/* Estilo para los iconos */
+.iconosContact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem; /* Espaciado entre los iconos */
+}
+
+.iconosContact li {
+  display: inline-block; /* Los íconos estarán en línea */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.iconosContact li:hover {
+  color: #b9537f;
+  transform: scale(1.1); /* Agranda ligeramente el icono al hacer hover */
+  opacity: 0.8; /* Reduce la opacidad para un efecto sutil */
+}
+
+.iconosContact a {
+  text-decoration: none;
+  color: inherit; /* Usa el color actual del texto */
+}
+
+.iconosContact .icono {
+  font-size: 1.5rem; /* Tamaño de los iconos */
+}
+
+.navHome ul {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: 300;
+}
+.navHome ul li.active a {
+  color: #b9537f; /* El color que quieres para el enlace activo */
+  font-weight: bold; /* Opcional: puedes hacer que el texto se vea más fuerte */
+}
+
+.navHome ul li {
+  border-bottom: 1px solid transparent;
+}
+
+.navHome ul li:hover {
+  border-bottom: 1px solid #b9537f;
+
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.4s, opacity 0.3s;
+}
+
+.latestP {
+  display: flex;
+  justify-content: start;
+  padding: 2rem;
+  gap: 1rem;
+  font-size: 22px;
+}
+
+.latestP h3 {
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+
+#icono-lp {
+  align-items: center;
+  color: #b9537f;
+  font-size: 40px;
+}
+
+.contentHome {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: justify;
+
+  padding: 10px;
+
+  gap: 1rem;
+  width: 100vw;
+}
+.fotoproyecto img {
+  height: auto;
+  box-shadow: 1px 1px 4px#33333374;
+}
+
+.textoproject {
+  /* border: 1px solid pink; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.textoproject a {
+  font-weight: bold;
+  border-bottom: 1px solid #b9537f;
+  max-width: fit-content;
+}
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  gap: 8px; /* Espaciado entre los elementos */
+  justify-content: space-around; /* Distribuir los elementos dentro del ancho disponible */
+  padding: 1rem;
+  margin: 0;
+}
+.tecnologias ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+
+  gap: 1rem;
+  /* border: 1px solid yellow; */
+}
+.tecnologias ul li {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+}
+.contentHome > div {
+  width: 100vw;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+@media (min-width: 770px) {
+  .contentHome {
+    display: flex; /* Configura el contenedor como flexbox */
+    flex-direction: row;
+    width: 90vw; /* Ajusta según tu diseño */
+    /* margin: 0 auto; */
+    flex-wrap: nowrap;
+    align-items: start; /* Asegura que ambos (imagen y texto) estén alineados verticalmente */
+  }
+
+  .contentHome > div {
+    width: 100vw;
+
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .tecnologias {
+    justify-content: space-between;
+  }
+  .tecnologias ul {
+    justify-content: flex-start; /* Cambia la alineación al inicio */
+  }
+
+  .tecnologias ul li {
+    font-size: 3rem;
+  }
+
+  .projectDemo {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 4px#33333374;
+  }
+  .iconosContact .icono {
+    font-size: 5rem; /* Tamaño de los iconos */
+  }
+  .latestP {
+    justify-content: center;
+  }
+}

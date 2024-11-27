@@ -1,0 +1,129 @@
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem;
+  text-align: justify;
+  font-size: 22px;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  /* background-color: #33333336; */
+}
+
+.aboutmehead {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  color: #b9537f;
+}
+
+.aboutmehead #aboutmeIcon {
+  font-size: 40px;
+}
+
+/* Grid aplicado al contenido */
+.aboutmetext {
+  display: grid;
+  grid-template-columns: 1fr; /* Móvil: todo en una columna */
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+/* Párrafos */
+.aboutmetext p {
+  padding: 1rem;
+  line-height: 1.4em;
+}
+
+/* Imagen principal */
+.aboutmeimg {
+  grid-row: 1 / 4; /* Imagen ocupa dos filas */
+  margin-bottom: 0;
+  height: auto;
+  min-width: 300px;
+}
+.aboutmeimg img {
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #333;
+}
+
+.imagenesvarias {
+  display: flex; /* Coloca las imágenes en una fila */
+  gap: 1rem;
+  grid-column: 1; /* Aparecen en la segunda columna */
+  grid-row: 5; /* Debajo del primer párrafo */
+  justify-content: center;
+  flex-direction: row;
+}
+
+.imagenesvarias img {
+  width: 100px; /* Ajusta el ancho de cada imagen */
+  height: 100px;
+
+  object-fit: cover;
+  border-radius: 5px;
+
+  box-shadow: 1px 1px 2px #333;
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+  .aboutmetext {
+    grid-template-columns: 1fr 1fr; /* Imagen 50% y texto 50% */
+    padding: 1rem;
+    min-height: auto;
+    font-size: 22px;
+  }
+
+  /* Asegurarse de que la columna de la derecha tenga la misma altura que la columna de la izquierda */
+  .aboutmetext > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el texto esté distribuido y no se desplace */
+    height: 100%; /* Asegura que los párrafos ocupen toda la altura */
+  }
+  .aboutmeimg {
+    grid-row: 1 / 5; /* Imagen ocupa dos filas */
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .aboutmeimg img {
+    width: 100%; /* Imagen ocupa todo el espacio */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #333;
+  }
+
+  .aboutmetext p:first-of-type {
+    grid-column: 2; /* Primer párrafo a la derecha de la imagen */
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .imagenesvarias {
+    display: flex; /* Coloca las imágenes en una fila */
+    gap: 1rem;
+    grid-column: 2; /* Aparecen en la segunda columna */
+    grid-row: 2; /* Debajo del primer párrafo */
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .imagenesvarias img {
+    width: 33%; /* Ajusta el ancho de cada imagen */
+    height: 180px;
+
+    object-fit: cover;
+    border-radius: 5px;
+
+    box-shadow: 1px 1px 2px #333;
+  }
+
+  .aboutmetext p:last-of-type {
+    grid-column: 2; /* Segundo párrafo a la derecha */
+    grid-row: 3; /* Debajo de las imágenes */
+    margin-top: 0;
+  }
+}
