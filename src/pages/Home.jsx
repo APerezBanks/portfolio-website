@@ -19,7 +19,6 @@ const Home = () => {
           <img src='/retrato2.png' alt='selfie de Alex' />
         </div>
 
-        {/* Contenedor para el texto y los iconos */}
         <div className='textoYIconos'>
           <div className='texto'>
             <h1>Hi, I'm Alejandro P.</h1>
@@ -81,7 +80,33 @@ const Home = () => {
           <div className='fotoproyecto'>
             <img src='/innovaspace.png' alt='coworking screenshot' />
           </div>
+
           <div className='textoproject'>
+            <div className='tecnologias'>
+              <ul>
+                <li>
+                  <FaHtml5 title='HTML' />
+                </li>
+                <li>
+                  <FaCss3Alt title='CSS' />
+                </li>
+                <li>
+                  <FaJs title='JavaScript' />
+                </li>
+                <li>
+                  <SiVite title='Vite' />
+                </li>
+                <li>
+                  <FaReact title='React' />
+                </li>
+                <li>
+                  <SiMysql title='SQL' />
+                </li>
+                <li>
+                  <FaGitAlt title='Git' />
+                </li>
+              </ul>
+            </div>
             <h4>Coworking InnovaSpace</h4>
             <p>
               Innovaspace es una app desarrollada con React, CSS, Node.js y
@@ -94,38 +119,30 @@ const Home = () => {
             <a href='./pages/ProyectsPage.jsx'>Ver más</a>
           </div>
         </div>
-        <div className='tecnologias'>
-          <ul>
-            <li>
-              <FaHtml5 title='HTML' />
-            </li>
-            <li>
-              <FaCss3Alt title='CSS' />
-            </li>
-            <li>
-              <FaJs title='JavaScript' />
-            </li>
-            <li>
-              <SiVite title='Vite' />
-            </li>
-            <li>
-              <FaReact title='React' />
-            </li>
-            <li>
-              <SiMysql title='SQL' />
-            </li>
-            <li>
-              <FaGitAlt title='Git' />
-            </li>
-          </ul>
-        </div>
       </div>
       <div className='projectDemo'>
         <div className='contentHome'>
           <div className='fotoproyecto'>
             <img src='/pokedex.png' alt='coworking screenshot' />
           </div>
+
           <div className='textoproject'>
+            <div className='tecnologias'>
+              <ul>
+                <li>
+                  <FaHtml5 id='htmlIcon' title='HTML' />
+                </li>
+                <li>
+                  <FaCss3Alt title='CSS' />
+                </li>
+                <li>
+                  <FaJs title='JavaScript' />
+                </li>
+                <li>
+                  <MdCatchingPokemon id='pokeball' title='Pokeball' />
+                </li>
+              </ul>
+            </div>
             <h4>Pokedex</h4>
             <p>
               Aplicación web hecha con JavaScript que permite buscar y explorar
@@ -135,22 +152,6 @@ const Home = () => {
             </p>
             <a href='./pages/ProyectsPage.jsx'>Ver más</a>
           </div>
-        </div>
-        <div className='tecnologias'>
-          <ul>
-            <li>
-              <FaHtml5 id='htmlIcon' title='HTML' />
-            </li>
-            <li>
-              <FaCss3Alt title='CSS' />
-            </li>
-            <li>
-              <FaJs title='JavaScript' />
-            </li>
-            <li>
-              <MdCatchingPokemon id='pokeball' title='Pokeball' />
-            </li>
-          </ul>
         </div>
       </div>
     </main>

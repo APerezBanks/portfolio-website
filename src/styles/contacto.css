@@ -1,0 +1,87 @@
+/* Estilo base: oculta el nav por defecto */
+.navHome {
+  display: none;
+}
+
+.contactofondo {
+  display: grid;
+
+  grid-template-rows: 400px 1fr;
+  width: 100vw;
+  min-width: auto;
+  justify-content: center;
+
+  align-items: center;
+  padding: 10px;
+}
+.tarjeta,
+.cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+}
+
+.cv img {
+  box-shadow: 1px 1px 5px 1px #333;
+}
+
+.maindivcontact {
+  background-image: url('/public/escritorio.jpeg');
+
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* Mostrar el nav en pantallas más grandes (tablet o laptop) */
+@media (min-width: 768px) {
+  .navHome {
+    display: block;
+  }
+  .contactofondo {
+    grid-template-rows: 1fr;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .tarjeta,
+  .cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 3rem;
+  }
+}
+
+/* Contacto.css */
+
+/* La ventana modal que cubre toda la pantalla */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer; /* Indicador de clic fuera */
+}
+
+/* Imagen dentro del modal */
+.imagen-ampliada {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: auto; /* Cursor normal sobre la imagen */
+}

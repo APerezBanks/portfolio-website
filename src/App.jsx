@@ -3,6 +3,7 @@ import './App.css';
 import './styles/home.css';
 import './styles/footer.css';
 import './styles/aboutme.css';
+import './styles/contacto.css';
 import Header from './components/Header.jsx';
 
 import Home from './pages/Home.jsx';

@@ -20,11 +20,11 @@ const AboutmePage = () => {
           </li>
         </ul>
       </nav>
+      <div className='aboutmehead'>
+        <ImProfile id='aboutmeIcon' />
+        <h2>About me.</h2>
+      </div>
       <div className='aboutme'>
-        <div className='aboutmehead'>
-          <ImProfile id='aboutmeIcon' />
-          <h2>About me.</h2>
-        </div>
         <div className='aboutmetext'>
           <p>
             Hola, soy Alex. Lo primero, ¡muchas gracias por pasarte por esta

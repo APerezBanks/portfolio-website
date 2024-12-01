@@ -1,7 +1,7 @@
 .aboutme {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 1rem;
   text-align: justify;
   font-size: 22px;
@@ -13,14 +13,18 @@
 
 .aboutmehead {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+
   gap: 1rem;
-  color: #b9537f;
+
+  padding: 0.5rem;
 }
 
 .aboutmehead #aboutmeIcon {
   font-size: 40px;
+  color: #333;
 }
 
 /* Grid aplicado al contenido */
@@ -28,6 +32,7 @@
   display: grid;
   grid-template-columns: 1fr; /* Móvil: todo en una columna */
   gap: 1rem;
+  padding: 10px;
   min-height: 100vh;
 }
 
@@ -70,11 +75,18 @@
 
 /* Ajustes para pantallas grandes */
 @media (min-width: 769px) {
+  .aboutme {
+    /* width: 1400px; */
+    margin: 0 auto;
+
+    font-size: 18px;
+  }
   .aboutmetext {
-    grid-template-columns: 1fr 1fr; /* Imagen 50% y texto 50% */
+    grid-template-columns: 600px 600px; /* Imagen 50% y texto 50% */
     padding: 1rem;
     min-height: auto;
     font-size: 22px;
+    margin: 0 auto;
   }
 
   /* Asegurarse de que la columna de la derecha tenga la misma altura que la columna de la izquierda */
@@ -125,5 +137,17 @@
     grid-column: 2; /* Segundo párrafo a la derecha */
     grid-row: 3; /* Debajo de las imágenes */
     margin-top: 0;
+  }
+}
+
+/* Estilo base: oculta el nav por defecto */
+.navHome {
+  display: none;
+}
+
+/* Mostrar el nav en pantallas más grandes (tablet o laptop) */
+@media (min-width: 768px) {
+  .navHome {
+    display: block;
   }
 }
